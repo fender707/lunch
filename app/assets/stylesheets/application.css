@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+.loginn {
+  padding-top: 10px;
+}
