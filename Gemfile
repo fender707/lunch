@@ -10,6 +10,7 @@ group :test, :development do
   gem 'sqlite3', '~> 1.3.10'
 end
 gem 'therubyracer'
+
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
 gem 'devise'
