@@ -1,0 +1,16 @@
+
+  <% @menus.each do |menu| %>
+
+      <div class='main_p'>
+        <%= image_tag(menu.image_url) %>
+        <div class="one">
+          <h3><%= menu.title %></h3>
+          <p class="desc"><%= sanitize(menu.description) %></p>
+        </div>  
+        <div class="price_line">
+          <span class="price"><%= number_to_currency(menu.price) %>  
+        </div> 
+      </div>
+
+  <% end %>
+

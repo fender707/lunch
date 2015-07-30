@@ -9,12 +9,13 @@ gem 'rails', '4.0.2'
 group :test, :development do
   gem 'sqlite3', '~> 1.3.10'
 end
-
+gem 'therubyracer'
+gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-
+gem 'less-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
