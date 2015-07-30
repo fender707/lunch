@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+group :test, :development do
+  gem 'sqlite3', '~> 1.3.10'
+end
 
 gem 'will_paginate'
 gem 'devise'
@@ -43,6 +47,10 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
+
+group :production do
+  gem 'pg'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
