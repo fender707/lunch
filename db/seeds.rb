@@ -5,3 +5,76 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Menu.destroy_all
+Category.destroy_all
+
+first_category = Category.create!(name: 'First')
+main_category = Category.create!(name: 'Main')
+drink_category = Category.create!(name: 'Drink')
+
+Menu.create!([
+{
+title: "Potatoes",
+description: "Deliciues. Try it!",
+image_url: "images.jpeg",
+price: "25" ,
+category: first_category
+},
+{
+title: "Eggs with meat",
+description: "Very good!",
+image_url: "eggs.jpeg",
+price: "15" ,
+category: first_category
+},
+{
+title: "Ukrainian borsch",
+description: "Deliciues. Try it!",
+image_url: "images.jpeg",
+price: "15" ,
+category: first_category
+},
+{
+title: "Macarons with fish",
+description: "Fish is very nice and fresh",
+image_url: "index.jpeg",
+price: "30" ,
+category: main_category
+},
+{
+title: "Potato with fish",
+description: "Fish is very nice and fresh",
+image_url: "images.jpeg",
+price: "20" ,
+category: main_category
+},
+{
+title: "Cucumbers with fish",
+description: "Fish is very nice and fresh",
+image_url: "images.jpeg",
+price: "17" ,
+category: main_category
+},
+{
+title: "Tamova Vodka",
+description: "Russian one.",
+image_url: "vodka.jpg",
+price: "2" ,
+category: drink_category
+},
+{
+title: "Bellucci Amaretto Liqueur",
+description: "40 degrees.uuuuuhh.",
+image_url: "belluchi.jpg",
+price: "30" ,
+category: drink_category
+},
+{
+title: "Green Tea",
+description: "Nice One!",
+image_url: "green_tea.jpeg",
+price: "10" ,
+category: drink_category
+}
+])
