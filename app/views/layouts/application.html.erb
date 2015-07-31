@@ -74,7 +74,12 @@
 
     <div class="container">
         <div class="row">
-          <div class="span9">
+          <div class="span3">
+            <% if @cart %>
+              <%= render @cart %>
+            <% end %>
+          </div>
+          <div class="span6">
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
@@ -83,9 +88,9 @@
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
+                <% categories.each do |category| %>
+                  <li class='reload'><%= link_to category.name, root_path(filter: category.id) %></li>
+                <% end %>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->

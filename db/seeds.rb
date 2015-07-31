@@ -50,13 +50,6 @@ price: "20" ,
 category: main_category
 },
 {
-title: "Cucumbers with fish",
-description: "Fish is very nice and fresh",
-image_url: "images.jpeg",
-price: "17" ,
-category: main_category
-},
-{
 title: "Tamova Vodka",
 description: "Russian one.",
 image_url: "vodka.jpg",

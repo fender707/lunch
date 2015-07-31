@@ -1,7 +1,11 @@
 class InfosController < ApplicationController
 
   def index
-    @menus = Menu.all
+    if params[:filter]
+      @menus = Menu.filter(params[:filter]).order("Created_at DESC")
+    else
+      @menus = Menu.order("Created_at DESC").limit(5);
+    end
   end
 
 end
