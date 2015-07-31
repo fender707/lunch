@@ -17,4 +17,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :email, :password, :password_confirmation, :current_password) }
   end
 
+  def current_cart
+    cart = Cart.where(id: session[:cart_id]).first_or_create
+    session[:cart_id] = cart.id
+    cart
+  end
+
 end

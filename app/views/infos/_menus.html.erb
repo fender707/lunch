@@ -8,8 +8,9 @@
           <p class="desc"><%= sanitize(menu.description) %></p>
         </div>  
         <div class="price_line">
-          <span class="price"><%= number_to_currency(menu.price) %>  
-        </div> 
+          <span class="price"><%= number_to_currency(menu.price) %>
+	  <%=button_to "Add to Lunch", line_items_path(menu_id: menu),remote: true,:class => 'btn btn-default' %>
+	</div> 
       </div>
 
   <% end %>
