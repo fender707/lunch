@@ -1,12 +1,12 @@
 <h4>Your Lunch</h4>
   <table>
     <%= render(cart.line_items) %>
-    <tr class="total_line">
-      <td colspan="2"><h5>Total</h5></td>
-        <b><%= number_to_currency(cart.total_price) %></b>
+    <tr>
+      
     </tr>
   </table>
-
-  <div class="inline_button">
+  <h5>Total</h5>
+  <b><%= number_to_currency(cart.total_price) %></b>
+  <div>
    
    </div>

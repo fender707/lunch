@@ -22,7 +22,7 @@ price: "25" ,
 category: first_category
 },
 {
-title: "Eggs with meat",
+title: "Eggs & meat",
 description: "Very good!",
 image_url: "eggs.jpeg",
 price: "15" ,
@@ -36,7 +36,7 @@ price: "15" ,
 category: first_category
 },
 {
-title: "Macarons with fish",
+title: "Macarons & fish",
 description: "Fish is very nice and fresh",
 image_url: "index.jpeg",
 price: "30" ,
@@ -57,7 +57,7 @@ price: "2" ,
 category: drink_category
 },
 {
-title: "Bellucci Amaretto Liqueur",
+title: "Bellucci Liqueur",
 description: "40 degrees.uuuuuhh.",
 image_url: "belluchi.jpg",
 price: "30" ,
