@@ -14,6 +14,7 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
 gem 'devise'
+gem 'cancan'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'less-rails'

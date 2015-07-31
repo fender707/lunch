@@ -49,9 +49,12 @@
           <a class="brand" href="#">Lunch</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+	       <% if session[:user_id] %>
+		 <% if current_user.admin? %>
+                   <li><%= link_to "Orders", "/path1"  %></li>
+                   <li><%= link_to "Users", "/path2"  %></li>
+	         <% end %>
+	       <% end %>
 		<% if user_signed_in? %>
 		  <li>
 		    <%= link_to("Logout" ,destroy_user_session_path, method: :delete) %></li>
@@ -93,8 +96,7 @@
                 <% categories.each do |category| %>
                   <li class='reload'><%= link_to category.name, root_path(filter: category.id) %></li>
                 <% end %>
-
-
+		
               </ul>
             </div><!--/.well -->
           </div><!--/span-->

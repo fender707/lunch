@@ -1,4 +1,5 @@
 Lunch::Application.routes.draw do
+  get "admin/index"
   devise_for :users
   resources :menus
   resources :line_items, only: [:create]
