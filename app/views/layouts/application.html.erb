@@ -51,8 +51,9 @@
             <ul class="nav">
 	       <% if current_user %>
 		 <% if current_user.admin? %>
-                   <li><%= link_to "Orders", "/path1"  %></li>
-                   <li><%= link_to "Users", "/path2"  %></li>
+                   <li><%= link_to "Orders", orders_path  %></li>
+                   <li><%= link_to "Users", users_path  %></li>
+		   <li><%= link_to "Add Items", menus_path  %></li>
 	         <% end %>
 	       <% end %>
 		<% if user_signed_in? %>
