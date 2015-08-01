@@ -2,6 +2,7 @@ Lunch::Application.routes.draw do
   get "admin/index"
   devise_for :users
   resources :menus
+  resources :orders
   resources :line_items, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

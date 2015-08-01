@@ -6,8 +6,10 @@ def index
 end
 
 def create
+  @cart = current_cart
   @order = Order.new(order_params)
   @order.add_line_items_from_cart(current_cart)
+  @order.price = @cart.total_price
     if @order.save
       Cart.destroy(session[:cart_id])
       session[:cart_id] = nil
@@ -16,7 +18,6 @@ def create
       @cart = current_cart
       render action: "new" 
     end
-  end
 end
 
 def new
