@@ -8,5 +8,5 @@
   <h5>Total</h5>
   <b><%= number_to_currency(cart.total_price) %></b>
   <div>
-   
-   </div>
+     <%= button_to "Checkout", new_order_path, method: :get, :class => 'btn btn-success' %>
+  </div>
