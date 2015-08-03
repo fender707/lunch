@@ -1,4 +1,6 @@
-
+<% if current_user.admin? %>
+  <h4>Hello, Admin! You have <%= Order.count %> orders with total price <%= number_to_currency(Order.total_price) %></h4>
+<% end %>
 <h2>Menu</h2>
 <div class="entry">
   <%= render 'menus' %>
