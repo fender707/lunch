@@ -18,4 +18,9 @@
 //= require_tree .
 
 
+  $(".time-link").click(function(e){
+      e.preventDefault(e);
+      $(".showw").closest().toggle();
+  });
+
 

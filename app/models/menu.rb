@@ -9,4 +9,12 @@ class Menu < ActiveRecord::Base
     where('menus.category_id= ?', category_id)
   end
 
+  def self.time_ago(count)
+    if count.to_i < 5
+      where('menus.created_at = ?', count.to_i.days.ago)
+    else
+      where('menus.created_at >= ?', count.to_i.days.ago)
+    end
+  end
+
 end
