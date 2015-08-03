@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
  
   before_action :find_cart, only: [ :show, :destroy, :update, :edit]
+  
 
   def index
     @carts = Cart.all
