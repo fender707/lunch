@@ -7,6 +7,7 @@
       <th>Address</th>
       <th>Email</th>
       <th>Price</th>
+      <th>Created_at</th>
       <th class="offset">Destroy</th>
 
   </tr>
@@ -18,6 +19,7 @@
     <td><%= order.address %></td>
     <td><%= order.email %></td>
     <td><%= order.price %></td>
+    <td><%= order.created_at %></td>
     <td><%= link_to 'Destroy',order, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
