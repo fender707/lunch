@@ -66,6 +66,6 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock'
-  gem 'factory_girl'
   gem 'faker'
 end
+ gem 'factory_girl_rails', '~> 4.5.0', group: [:development, :test]
