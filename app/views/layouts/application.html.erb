@@ -100,14 +100,16 @@
                 <li class="nav-header">for order</li>
                 <% categories.each do |category| %>
                   <li class='reload'><%= link_to category.name, root_path(filter: category.id) %></li>
-                <% end %>
-		
+                <% end %>	
               </ul>
-	      <h4>Menu few day ago</h4>
-		<li><%= link_to "2 day ago", root_path(time_ago: 2) %></li>
-		<li><%= link_to "3 day ago", root_path(time_ago: 3) %></li>
-		<li><%= link_to "4 day ago", root_path(time_ago: 4) %></li>
-	        <li><%= link_to "More than 4 days", root_path(time_ago: 5) %></li>
+	     
+	      <h4>Menu few days ago</h4>
+ 	      <ul class="nav nav-list">
+		<li class='reload'><%= link_to "2 day ago", root_path(time_ago: 2) %></li>
+		<li class='reload'><%= link_to "3 day ago", root_path(time_ago: 3) %></li>
+		<li class='reload'><%= link_to "4 day ago", root_path(time_ago: 4) %></li>
+	        <li class='reload'><%= link_to "More than 4 days", root_path(time_ago: 5) %></li>
+	      </ul>
             </div><!--/.well -->
           </div><!--/span-->
         </div><!--/row-->
