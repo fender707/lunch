@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-before_action :current_admin
+before_action :current_admin, only: [:index, :show, :edit, :update, :destroy]
 
 def index
   @orders = Order.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
