@@ -14,10 +14,12 @@ class Menu < ActiveRecord::Base
   end
 
   def self.time_ago(count)
+    count_int = count.to_i
+    date = Date.parse(count_int.days.ago.to_s)
     if count.to_i < 5
-      where('menus.created_at = ?', count.to_i.days.ago)
+      where(created_at: date..date.end_of_day)
     else
-      where('menus.created_at >= ?', count.to_i.days.ago)
+      where(created_at: 5.days.ago..30.days.ago)
     end
   end
 
