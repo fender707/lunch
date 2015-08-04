@@ -101,8 +101,7 @@
                 <% categories.each do |category| %>
                   <li class='reload'><%= link_to category.name, root_path(filter: category.id) %></li>
                 <% end %>	
-              </ul>
-	     
+              </ul>	     
 	      <h4>Weekdays</h4>
  	      <ul class="nav nav-list">
 		<li class='reload'><%= link_to 2.days.ago.to_time.strftime('%B %e'), root_path(time_ago: 2) %></li>
@@ -111,8 +110,6 @@
 		<li class='reload'><%= link_to 5.days.ago.to_time.strftime('%B %e'), root_path(time_ago: 5) %></li>
 	        <li class='reload'><%= link_to "More than 5 days", root_path(time_ago: 6) %></li>
 	      </ul>
-  
-
             </div><!--/.well -->
           </div><!--/span-->
         </div><!--/row-->
