@@ -4,10 +4,9 @@ class Menu < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items  
 
-
   validates_presence_of :title, :price, :description, :published_on
   validates :title, length: { in: 3..50}, uniqueness: true
-  validates :description, length: {maximum: 500}
+  validates :description, length: { maximum: 500 }
 
   def self.filter(category_id)
     where('menus.category_id= ?', category_id)
