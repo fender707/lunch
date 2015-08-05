@@ -4,7 +4,7 @@ FactoryGirl.define do
     address        {Faker::Lorem.characters(rand(10..50))}
     price          {Faker::Number.positive(1.00,50.00)} 
     email          {Faker::Internet.email}
-    #association :category, factory: :category
+
   end
 
 end
