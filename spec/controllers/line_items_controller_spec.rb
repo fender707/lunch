@@ -19,5 +19,7 @@ RSpec.describe LineItemsController, type: :controller do
         assert_redirected_to root_path
       end
     end
+
+     
   end
 end

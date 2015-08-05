@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe OrdersController, type: :controller do
+RSpec.describe UsersController, type: :controller do
 
  context "when user not logged in" do
     describe "GET #index" do
@@ -13,8 +13,8 @@ RSpec.describe OrdersController, type: :controller do
 
   context "when user logged in" do
     let(:user) { FactoryGirl.create(:user)}
-    let(:line_item) { FactoryGirl.create(:line_item)}
-    subject { FactoryGirl.create(:order) } 
+    subject { FactoryGirl.create(:menu)}
+
     before do
       sign_in user
     end
@@ -26,16 +26,6 @@ RSpec.describe OrdersController, type: :controller do
       expect(response).to render_template :index
     end
   end
-
-  describe "Post #create" do
-
-    it "should create order" do
-      assert_difference('Order.count') do
-        post :create,  order: { name: "sasha", email: "hhhh@kkk.com", price: "23", address: "gfdgdfgdsdfgsdgsdfgsdgsdf" }
-      end
-      assert_redirected_to root_path
-    end
-  end
-
 end
+
 end

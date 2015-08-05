@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Menu, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
-
+  before(:each) { @menu = FactoryGirl.create :menu}
   it { should belong_to(:category) }
 
   it { should validate_presence_of(:title) }
@@ -20,6 +20,5 @@ RSpec.describe Menu, type: :model do
   it { should ensure_length_of(:title).is_at_most(50) }
 
   it { should ensure_length_of(:description).is_at_most(500) }
-
 
 end
