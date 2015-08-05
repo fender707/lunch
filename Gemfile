@@ -67,5 +67,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'webmock'
   gem 'faker'
+  gem 'assert_difference'
 end
  gem 'factory_girl_rails', '~> 4.5.0', group: [:development, :test]

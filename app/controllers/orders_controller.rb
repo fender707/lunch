@@ -52,7 +52,7 @@ end
  end
 
  def order_params
-   params.require(:order).permit(:name, :address, :email)
+   params.require(:order).permit(:name, :address, :email, :price)
  end
 
 

@@ -2,6 +2,7 @@ Lunch::Application.routes.draw do
   get "admin/index"
   devise_for :users
   get "users" => 'users#index'
+  resources :carts
   resources :menus
   resources :orders
   resources :line_items, only: [:create]

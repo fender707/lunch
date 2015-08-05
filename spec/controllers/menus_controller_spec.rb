@@ -14,7 +14,7 @@ RSpec.describe MenusController, type: :controller do
   context "when user logged in" do
     let(:user) { FactoryGirl.create(:user)}
     subject { FactoryGirl.create(:menu)}
-    
+
     before do
       sign_in user
     end
