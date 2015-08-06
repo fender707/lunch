@@ -43,12 +43,12 @@ RSpec.describe Menu, type: :model do
   describe "time ago method" do
     
     it "is eq to menu item" do
-      @menu = Menu.create(title: "Potatoes",description:"Very cool",price: "10", published_on: "2015-07-31",created_at: 2.days.ago) 
+      @menu = Menu.create!(title: "Potatoes",description:"Very cool",price: "10", published_on: "2015-07-31",created_at: 2.days.ago) 
       expect(Menu.time_ago('2').last).to eq @menu
     end
 
     it "is not eq to menu item" do
-      @menu = Menu.create(title: "Potatoes",description:"Very cool",price: "10", published_on: "2015-07-31",created_at: 5.days.ago) 
+      @menu = Menu.create!(title: "Potatoes",description:"Very cool",price: "10", published_on: "2015-07-31",created_at: 5.days.ago) 
       expect(Menu.time_ago('2').last).not_to eq @menu
     end
 

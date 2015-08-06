@@ -21,4 +21,20 @@ RSpec.describe Order, type: :model do
 
   it { should validate_length_of(:address).is_at_most(50) }
 
+  describe "total price order's price" do
+
+    it "is eq to 30" do
+      order1 = Order.create!(name: "Slava",address:"Ternoliska st.11",price: "10.00", email: "fender707@rambler.ru") 
+      order2 = Order.create!(name: "Vitalya",address:"Ternoliska st.11",price: "20.00", email: "fender709@rambler.ru") 
+      expect(Order.total_price).to eq 30
+    end
+
+    it "is not eq 30" do
+      order1 = Order.create!(name: "Slava",address:"Ternoliska st.11",price: "20.00", email: "fender707@rambler.ru") 
+      order2 = Order.create!(name: "Vitalya",address:"Ternoliska st.11",price: "20.00", email: "fender709@rambler.ru") 
+      expect(Order.total_price).not_to eq 30
+    end
+
+  end
+
 end

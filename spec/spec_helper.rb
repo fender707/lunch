@@ -33,6 +33,19 @@ config.infer_spec_type_from_file_location!
 config.order = "random"
 config.include AssertDifference
 config.include Devise::TestHelpers, type: :controller
+ require 'database_cleaner'
+  config.before(:suite) do
+DatabaseCleaner.strategy = :transaction
+DatabaseCleaner.clean_with(:deletion)
+end
+config.before(:each) do |example|
+DatabaseCleaner.strategy = example.metadata[:type] == :feature ? :deletion : :transaction
+DatabaseCleaner.start
+end
+config.after(:each) do
+DatabaseCleaner.clean
+end
+
 # assertions if you prefer.
 config.expect_with :rspec do |expectations|
 # This option will default to `true` in RSpec 4. It makes the `description`
