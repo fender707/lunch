@@ -68,5 +68,6 @@ group :test do
   gem 'webmock'
   gem 'faker'
   gem 'assert_difference'
+  gem 'capybara'
 end
  gem 'factory_girl_rails', '~> 4.5.0', group: [:development, :test]
