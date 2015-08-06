@@ -18,7 +18,7 @@ class Menu < ActiveRecord::Base
     if count.to_i < 6
       where(created_at: date..date.end_of_day)
     else
-      where(created_at: 6.days.ago..30.days.ago)
+      where('menus.created_at >= ?', 6.days.ago)
     end
   end
 
