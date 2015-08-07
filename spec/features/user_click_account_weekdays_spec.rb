@@ -2,7 +2,6 @@ require 'spec_helper'
 
 feature 'User visit Account link' do
 
-
   before(:each) do
     visit new_user_registration_path
     fill_in 'Username',  with:"slava"

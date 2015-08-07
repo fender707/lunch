@@ -13,13 +13,13 @@ RSpec.describe Menu, type: :model do
 
   it { should validate_presence_of(:price) }
 
-  it { should ensure_length_of(:title).is_at_least(3) }
+  it { should validate_length_of(:title).is_at_least(3) }
 
   it { should validate_uniqueness_of(:title) }
 
-  it { should ensure_length_of(:title).is_at_most(50) }
+  it { should validate_length_of(:title).is_at_most(50) }
 
-  it { should ensure_length_of(:description).is_at_most(500) }
+  it { should validate_length_of(:description).is_at_most(500) }
 
   it "should require name" do
     @menu.title = nil
