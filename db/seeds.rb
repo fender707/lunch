@@ -21,7 +21,7 @@ image_url: "images.jpeg",
 price: "25" ,
 category: first_category,
 created_at: "2015-07-31 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-02 09:26:20"
 },
 {
 title: "Eggs & meat",
@@ -30,7 +30,7 @@ image_url: "eggs.jpeg",
 price: "15" ,
 category: first_category,
 created_at: "2015-08-01 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-02 09:26:20"
 },
 {
 title: "Ukrainian borsch",
@@ -39,7 +39,7 @@ image_url: "images.jpeg",
 price: "15" ,
 category: first_category,
 created_at: "2015-08-02 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-03 09:26:20"
 },
 {
 title: "Macarons & fish",
@@ -48,7 +48,7 @@ image_url: "index.jpeg",
 price: "30" ,
 category: main_category,
 created_at: "2015-08-02 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-04 09:26:20"
 },
 {
 title: "Potato with fish",
@@ -57,7 +57,7 @@ image_url: "images.jpeg",
 price: "20" ,
 category: main_category,
 created_at: "2015-08-01 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-05 09:26:20"
 },
 {
 title: "Tamova Vodka",
@@ -66,7 +66,7 @@ image_url: "vodka.jpg",
 price: "2" ,
 category: drink_category,
 created_at: "2015-07-31 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-02 09:26:20"
 },
 {
 title: "Bellucci Liqueur",
@@ -75,7 +75,7 @@ image_url: "belluchi.jpg",
 price: "30" ,
 category: drink_category,
 created_at: "2015-07-31 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-03 09:26:20"
 },
 {
 title: "Green Tea",
@@ -84,6 +84,6 @@ image_url: "green_tea.jpeg",
 price: "10" ,
 category: drink_category,
 created_at: "2015-07-31 09:26:20",
-published_on: "2015-07-31 09:26:20"
+published_on: "2015-07-01 09:26:20"
 }
 ])
