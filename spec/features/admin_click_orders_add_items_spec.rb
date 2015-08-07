@@ -22,6 +22,13 @@ feature 'Admin visit different pages' do
     expect(page).to have_content('Menus')
   end
 
+  scenario 'admin visit Users link' do
+    sign_in
+    visit root_path
+    click_link "Users"
+    expect(page).to have_content('Listing users')
+  end
+
   def sign_in
     user = User.create!(username: "Slava", email: "fender707@rambler.ru",admin: true, password: "password")
     visit user_session_path
