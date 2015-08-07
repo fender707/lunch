@@ -5,6 +5,7 @@ FactoryGirl.define do
     price          {Faker::Number.positive(1.00,50.00)} 
     published_on   {Faker::Time.between(2.days.ago,Time.now,:midnight)}
     category_id    2
+    created_at     2.days.ago
     association :category, factory: :category
   end
 
